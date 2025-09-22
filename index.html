@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MongoDB Demo</title>
+</head>
+<body>
+  <h1>Insert Sample Data</h1>
+  <button onclick="addUser()">Add User</button>
+  <button onclick="addItem()">Add Laptop</button>
+  <button onclick="addFood()">Add Cheeseburger</button>
+  <button onclick="addCCTV()">Add CCTV</button>
+
+  <script>
+    const API_URL = "https://your-backend-service.com"; // replace with your deployed server URL
+
+    async function addUser() {
+      const res = await fetch(`${API_URL}/users`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: 1,
+          agent_no: "AGT001",
+          fullname: "John Doe",
+          username: "johndoe",
+          password: "securepass123"
+        })
+      });
+      console.log(await res.json());
+    }
+
+    async function addItem() {
+      const res = await fetch(`${API_URL}/r5itemlist`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: 1,
+          itemname: "Laptop",
+          description: "High performance gaming laptop",
+          price: 2500.00,
+          picture: "" // skip for now, or use base64
+        })
+      });
+      console.log(await res.json());
+    }
+
+    async function addFood() {
+      const res = await fetch(`${API_URL}/mydiner`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: 1,
+          itemname: "Cheeseburger",
+          description: "Delicious cheeseburger with fries",
+          price: 6.99,
+          picture: ""
+        })
+      });
+      console.log(await res.json());
+    }
+
+    async function addCCTV() {
+      const res = await fetch(`${API_URL}/cctv`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: 1,
+          itemname: "Security Camera",
+          description: "HD night vision CCTV camera",
+          price: 1200.00,
+          picture: ""
+        })
+      });
+      console.log(await res.json());
+    }
+  </script>
+</body>
+</html>
