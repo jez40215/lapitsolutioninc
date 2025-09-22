@@ -9,7 +9,7 @@ app.use(bodyParser.json({ limit: "10mb" })); // allow images as base64
 app.use(cors());
 
 // 1. Connect to MongoDB Atlas
-mongoose.connect("your_mongoDB_atlas_uri/Quotationauto", {
+mongoose.connect("mongodb+srv://jez40215_db_user:<db_password>@cluster0.hdtdors.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
