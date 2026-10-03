@@ -601,6 +601,80 @@
             gap: 8px;
         }
 
+        /* CONTACT US SECTION */
+        .contact-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            padding: 25px 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .contact-container h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed var(--border-gold);
+            padding-bottom: 10px;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border-gold);
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--gold-primary);
+            background-color: rgba(229, 193, 88, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 20px;
+            color: var(--gold-primary);
+            width: 28px;
+            text-align: center;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            overflow: hidden;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            color: var(--gold-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-size: 14px;
+            color: var(--text-light);
+            word-break: break-word;
+        }
+
         /* FULLSCREEN INTERACTIVE IMAGE LIGHTBOX */
         .lightbox-modal {
             position: fixed;
@@ -946,6 +1020,52 @@
                 </div>
                 <div class="image-zoom-hint">
                     <i class="fa-solid fa-magnifying-glass-plus"></i> Click or tap image to expand full size & zoom
+                </div>
+            </div>
+
+            <!-- CONTACT US SECTION BELOW COMPANY PROFILE -->
+            <div class="contact-container">
+                <h2>Please contact us on</h2>
+                <div class="contact-list">
+                    <a href="https://share.google/HiXQmwCyGkgJDYbMD" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Address</span>
+                            <span class="contact-value">Golden Square Trading and Services</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.goldensquareqa.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-solid fa-globe contact-icon"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Website</span>
+                            <span class="contact-value">www.goldensquareqa.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/goldensquareqatar?stkn=cjBoeXRrNTRsaHRt" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-brands fa-instagram contact-icon"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Instagram</span>
+                            <span class="contact-value">@goldensquareqatar</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/1LzTHVGQLw/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-brands fa-facebook contact-icon"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Facebook</span>
+                            <span class="contact-value">Golden Square Trading & Services</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@goldensquareqa?_r=1&_t=ZS-9ACNKOBDI04" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-brands fa-tiktok contact-icon"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">TikTok</span>
+                            <span class="contact-value">@goldensquareqa</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
